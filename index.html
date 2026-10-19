@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A sample website project to learn Docker." />
+  <title>CloudLaunch | Docker Practice Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home"><span class="brand-mark">C</span> CloudLaunch</a>
+    <nav aria-label="Main navigation"><a href="#features">Features</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">LEARN · BUILD · DEPLOY</p>
+        <h1>Your first step to<br /><span>containerized apps.</span></h1>
+        <p class="intro">A simple responsive website you can package into a Docker image and run anywhere.</p>
+        <a class="primary-btn" href="#features">Explore the project <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="hero-card" aria-label="Deployment steps">
+        <div class="card-top"><span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span><span class="terminal-label">deployment.sh</span></div>
+        <div class="terminal"><p><span>$</span> docker build -t cloudlaunch .</p><p class="success">✓ Image built successfully</p><p><span>$</span> docker run -d -p 8080:80 cloudlaunch</p><p class="success">✓ Container is running</p><div class="status"><i></i> Application ready</div></div>
+      </div>
+    </section>
+    <section id="features" class="features section">
+      <p class="eyebrow">WHAT YOU'LL PRACTICE</p><h2>Small project. Real skills.</h2>
+      <div class="feature-grid">
+        <article class="feature"><div class="feature-icon">01</div><h3>Web basics</h3><p>Explore clean HTML, responsive CSS, and a little JavaScript.</p></article>
+        <article class="feature"><div class="feature-icon">02</div><h3>Docker image</h3><p>Use a Dockerfile to package the site with the Nginx web server.</p></article>
+        <article class="feature"><div class="feature-icon">03</div><h3>Run anywhere</h3><p>Launch the container locally and access it from your browser.</p></article>
+      </div>
+    </section>
+    <section id="about" class="about section"><div><p class="eyebrow">ABOUT THIS DEMO</p><h2>Built for your Docker learning journey.</h2></div><p>This is a static demo website. Nginx serves the files from inside the container, so you don't need to install a web server directly on your computer.</p></section>
+    <section id="contact" class="contact section"><div><p class="eyebrow">READY TO TRY?</p><h2>You're one build away.</h2><p>Build the image, start the container, then open the site in your browser.</p></div><button id="copy-command" class="primary-btn" type="button">Copy Docker command</button><p id="copy-status" class="copy-status" role="status" aria-live="polite"></p></section>
+  </main>
+  <footer><span>© <span id="year"></span> CloudLaunch Demo</span><span>Made for Docker practice</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
